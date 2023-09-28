@@ -1,0 +1,20 @@
+switch app.valuepoints
+	case 1 
+		line(app.UIAxes, x, eval(app.valuey), 'LineStyle', '-', 'Marker', '.', 'Color', app.selectedColor)
+	case 0 
+		cla(app.UIAxes);
+		line(app.UIAxes, x, eval(app.valuey), 'Color', app.selectedColor)
+
+
+switch app.valuegrid
+	case 1 
+		grid(app.UIAxes, 'on');
+	case 0 
+		grid(app.UIAxes, 'off');
+
+
+
+if app.valuepoints == 1 && app.valuegrid == 1
+	line(app.UIAxes, x, eval(app.valuey), 'LineStyle', '-', 'Marker', '.', 'Color', app.selectedColor);grid(app.UIAxes, 'on')
+elseif app.value
+end
